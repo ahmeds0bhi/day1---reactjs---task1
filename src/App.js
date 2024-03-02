@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React from 'react';
+import ImageSlider from './components/ImageSlider';
 
-function App() {
+const App = () => {
+  const imageNames = [
+    'image1.jpg',
+    'image2.jpg',
+    'image3.jpg',
+  ];
+
+  const images = imageNames.map(imageName => imageName); // No need to include PUBLIC_URL
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Image Slider Example</h1>
+      <ImageSlider images={images} />
     </div>
   );
-}
+};
 
 export default App;
+
+
